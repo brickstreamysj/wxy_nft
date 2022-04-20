@@ -19,7 +19,7 @@
 	<meta name="twitter:image" content="./images/guevara_img05" />
 	<meta name="twitter:description" content="WXY 개발팀에서 제작된 NFT를 만나보세요">
 	<!-- favicon -->
-	<link rel="shortcut icon" href="favicon.ico" type=".image/guevara_favicon">
+	<!-- <link rel="shortcut icon" href="favicon.ico" type=""> -->
 
     <link rel="stylesheet" href="./css/css.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -593,6 +593,7 @@
 			}	
 			}
 		};
+		
 		var swiperOptionsTwo = {
 			loop: true,
 			autoplay: {
@@ -621,6 +622,7 @@
 				}	
 			}
 		};
+
 		var swiperOptionsThree = {
 			loop: true,
 			autoplay: {
@@ -649,11 +651,11 @@
 				}	
 			}
 		};
+		AOS.init();
+
   		var swiper = new Swiper(".swiper-container", swiperOptions);
 		var sSwiper = new Swiper(".swiper-container2", swiperOptionsTwo);
 		var mSwiper = new Swiper('.swiper-container3', swiperOptionsThree);
-		
-		AOS.init();
 		
 		const hamburgerBtn = document.querySelector('.hamburger_btn');
 		const navList = document.querySelector('.header_nav_list');
@@ -672,6 +674,7 @@
 		}
 		});
 
+		// clickevent
 		$(document).ready(function(){
 			$(function(){
 			$('.roadmap_box').on({
@@ -695,8 +698,6 @@
 		})
 		
 		// scrolltop Event
-	
-
 		let delay = 1000;
 		$( window ).scroll( function() {
 			console.log('@@@')
@@ -707,7 +708,7 @@
             $( '.side_nav' ).fadeOut();
 			$('#header').css('height','92px');
           }
-
+		//   scrollbottom
 		  let scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
 		//   console.log('adsasd',scrollBottom)
 		  if(scrollBottom <= 0) {
@@ -717,7 +718,7 @@
 			$('#footer').css('height','0px');
 		  }
         } );
-
+		
 		// let scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
 		// $(window).scroll(function(){
 		// 	$(this).scrollBottom {
@@ -725,6 +726,8 @@
 		// 		$('#footer').css('display','block');
 		// 	}
 		// })
+
+		// scrolltop move btn
 		$(function(){
 			$('.side_nav').on({
 				'click':function(){
